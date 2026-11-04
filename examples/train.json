@@ -1,0 +1,8 @@
+[
+  {"text":"申请退款 重复扣款 支付账单 金额错误", "label":"billing"},
+  {"text":"退钱 付款失败 发票 收费问题", "label":"billing"},
+  {"text":"程序崩溃 导出失败 软件报错 无法启动", "label":"technical"},
+  {"text":"登录错误 页面打不开 功能故障 系统异常", "label":"technical"},
+  {"text":"希望增加功能 建议支持深色主题", "label":"suggestion"},
+  {"text":"建议改进界面 添加新的快捷操作", "label":"suggestion"}
+]

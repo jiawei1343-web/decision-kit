@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8080/v1/chat/completions",
+  "model": "your-local-model",
+  "input_per_million": 0,
+  "output_per_million": 0,
+  "call_ceiling_usd": 0,
+  "timeout_seconds": 30,
+  "max_output_tokens": 512
+}

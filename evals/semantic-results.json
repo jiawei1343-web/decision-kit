@@ -1,0 +1,354 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "load_seconds": 14.086822400000528,
+  "samples": 20,
+  "languages": 20,
+  "correct": 19,
+  "accepted": 13,
+  "accepted_correct": 13,
+  "notice": "Synthetic one-example-per-language smoke test. Not independent human evaluation, not Jev comparison, not evidence of 100-language accuracy. No threshold tuning on these results.",
+  "results": [
+    {
+      "language": "zh",
+      "text": "我的银行卡被扣了两次钱，请退还多扣的部分。",
+      "label": "billing",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8248881101608276,
+        "technical": 0.8002277612686157,
+        "suggestion": 0.7782875299453735
+      },
+      "margin": 0.024660348892211914,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.08917769999970915
+    },
+    {
+      "language": "en",
+      "text": "The application closes whenever I try to save a document.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8134341239929199,
+        "technical": 0.8549870252609253,
+        "suggestion": 0.7992662191390991
+      },
+      "margin": 0.04155290126800537,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.027483399999255198
+    },
+    {
+      "language": "fr",
+      "text": "Je voudrais une facture pour mon paiement.",
+      "label": "suggestion",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8641855716705322,
+        "technical": 0.8214081525802612,
+        "suggestion": 0.8659290075302124
+      },
+      "margin": 0.0017434358596801758,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": false,
+      "expected": "billing",
+      "seconds": 0.02766450000126497
+    },
+    {
+      "language": "de",
+      "text": "Bitte fügen Sie einen dunklen Modus hinzu.",
+      "label": "suggestion",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8141615390777588,
+        "technical": 0.8107032775878906,
+        "suggestion": 0.8596740961074829
+      },
+      "margin": 0.04551255702972412,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.028837099998781923
+    },
+    {
+      "language": "es",
+      "text": "La aplicación se bloquea cuando intento iniciar sesión.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8092234134674072,
+        "technical": 0.8503272533416748,
+        "suggestion": 0.7941337823867798
+      },
+      "margin": 0.04110383987426758,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.030997100000604405
+    },
+    {
+      "language": "pt",
+      "text": "Fui cobrado duas vezes. Quero um reembolso.",
+      "label": "billing",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8433117866516113,
+        "technical": 0.8113446235656738,
+        "suggestion": 0.8247439861297607
+      },
+      "margin": 0.018567800521850586,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.030017600000064704
+    },
+    {
+      "language": "it",
+      "text": "Vorrei poter personalizzare i colori dell'interfaccia.",
+      "label": "suggestion",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8010842800140381,
+        "technical": 0.8122066259384155,
+        "suggestion": 0.8490885496139526
+      },
+      "margin": 0.03688192367553711,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.027496000000610366
+    },
+    {
+      "language": "ru",
+      "text": "Программа вылетает при открытии файла.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8048766851425171,
+        "technical": 0.8525495529174805,
+        "suggestion": 0.7844163775444031
+      },
+      "margin": 0.04767286777496338,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.026587099999233033
+    },
+    {
+      "language": "ar",
+      "text": "تم خصم المبلغ مرتين وأريد استرداد الدفعة الزائدة.",
+      "label": "billing",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.845914363861084,
+        "technical": 0.8070536255836487,
+        "suggestion": 0.8323427438735962
+      },
+      "margin": 0.013571619987487793,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.032777900001747184
+    },
+    {
+      "language": "hi",
+      "text": "कृपया ऐप में डार्क मोड की सुविधा जोड़ें।",
+      "label": "suggestion",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.7936993837356567,
+        "technical": 0.8000543117523193,
+        "suggestion": 0.8438397645950317
+      },
+      "margin": 0.0437854528427124,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.024605300000985153
+    },
+    {
+      "language": "ja",
+      "text": "ファイルを保存しようとするとアプリが終了します。",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.7810249924659729,
+        "technical": 0.8138468265533447,
+        "suggestion": 0.7515696883201599
+      },
+      "margin": 0.032821834087371826,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.024479800000335672
+    },
+    {
+      "language": "ko",
+      "text": "결제가 두 번 되었어요. 중복 결제를 환불해 주세요.",
+      "label": "billing",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8340595364570618,
+        "technical": 0.8199564218521118,
+        "suggestion": 0.787432074546814
+      },
+      "margin": 0.014103114604949951,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.026809700000740122
+    },
+    {
+      "language": "th",
+      "text": "อยากให้เพิ่มโหมดมืดในแอป",
+      "label": "suggestion",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.7736045122146606,
+        "technical": 0.7893000841140747,
+        "suggestion": 0.8233437538146973
+      },
+      "margin": 0.03404366970062256,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.025381499999639345
+    },
+    {
+      "language": "vi",
+      "text": "Ứng dụng bị treo khi tôi mở tệp.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.793061375617981,
+        "technical": 0.8390878438949585,
+        "suggestion": 0.7687876224517822
+      },
+      "margin": 0.04602646827697754,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.025845600001048297
+    },
+    {
+      "language": "tr",
+      "text": "İki kez ücret alındı, para iadesi istiyorum.",
+      "label": "billing",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8338700532913208,
+        "technical": 0.8093780279159546,
+        "suggestion": 0.8263821601867676
+      },
+      "margin": 0.007487893104553223,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.025406000000657514
+    },
+    {
+      "language": "id",
+      "text": "Tolong tambahkan pilihan tema gelap.",
+      "label": "suggestion",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.7758275270462036,
+        "technical": 0.7683724164962769,
+        "suggestion": 0.8186759352684021
+      },
+      "margin": 0.042848408222198486,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.026357099999586353
+    },
+    {
+      "language": "nl",
+      "text": "De app crasht zodra ik een bestand open.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8015661239624023,
+        "technical": 0.8595113754272461,
+        "suggestion": 0.7771495580673218
+      },
+      "margin": 0.05794525146484375,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.02574559999993653
+    },
+    {
+      "language": "pl",
+      "text": "Pobrano opłatę dwa razy. Proszę o zwrot pieniędzy.",
+      "label": "billing",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.8562120199203491,
+        "technical": 0.8093816637992859,
+        "suggestion": 0.8125185966491699
+      },
+      "margin": 0.0436934232711792,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "billing",
+      "seconds": 0.022142499999972642
+    },
+    {
+      "language": "uk",
+      "text": "Будь ласка, додайте темну тему інтерфейсу.",
+      "label": "suggestion",
+      "status": "needs_review",
+      "similarities": {
+        "billing": 0.8294166922569275,
+        "technical": 0.8344359397888184,
+        "suggestion": 0.8621939420700073
+      },
+      "margin": 0.027758002281188965,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "suggestion",
+      "seconds": 0.02362619999985327
+    },
+    {
+      "language": "sv",
+      "text": "Programmet kraschar när jag försöker spara filen.",
+      "label": "technical",
+      "status": "completed",
+      "similarities": {
+        "billing": 0.7986376881599426,
+        "technical": 0.8484900593757629,
+        "suggestion": 0.7747780680656433
+      },
+      "margin": 0.04985237121582031,
+      "calibrated": false,
+      "validation": "similarity_gate_not_accuracy_guarantee",
+      "correct": true,
+      "expected": "technical",
+      "seconds": 0.02358520000052522
+    }
+  ]
+}

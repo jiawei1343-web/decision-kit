@@ -1,0 +1,83 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DecisionKit 0.2.3</title><style>body{margin:0;background:#f6f4ed;color:#153441;font:17px/1.8 'Microsoft YaHei',sans-serif}main{max-width:1100px;margin:32px auto;padding:40px;background:white;border-radius:20px}img{width:100%;height:auto}a{color:#176c78}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d4dfe3;padding:12px;text-align:left}pre{background:#153441;color:#fff;padding:20px;overflow:auto;border-radius:12px}h2{margin-top:40px}@media(max-width:700px){main{padding:20px;margin:0}table{display:block;overflow:auto}}</style><main><h1>DecisionKit</h1>
+<p><strong>Spend computation where it matters.</strong></p>
+<p><img src="assets/computation-workshop.png" alt="DecisionKit 计算调度工作室"></p>
+<p>小机器人负责分配任务：简单工作送往小机器，困难工作进入观测站，重复任务取自档案转盘，不确定任务先在长椅等候。主视觉为概念插画，流程与测试证据见下文。</p>
+<p>面向 AI 助手的本地优先决策插件：用明确规则、可训练分类器、多语言语义模型和按需升级，完成可检查的结构化判断。提供 CLI、Python、MCP 与本机 HTTP 接口。</p>
+<p><img src="assets/decision-flow.png" alt="DecisionKit 决策流程"></p>
+<h2>已实现的能力</h2>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本地分类</td>
+<td>Unicode字符/词特征训练，无第三方依赖</td>
+</tr>
+<tr>
+<td>多语言语义</td>
+<td>可选 E5 本地权重，超长输入拒绝静默截断</td>
+</tr>
+<tr>
+<td>结构化判断</td>
+<td>classify、check、score、extract；非分类任务使用配置的聊天后端</td>
+</tr>
+<tr>
+<td>有限模型升级</td>
+<td>最多两个兼容聊天API，本地失败后按策略调用</td>
+</tr>
+<tr>
+<td>成本控制</td>
+<td>请求预算、项目累计预算、SQLite原子预留、未知费用保留</td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>精确匹配、TTL、项目/标准/模型/权限隔离</td>
+</tr>
+<tr>
+<td>可追踪性</td>
+<td>处理路径、预算账本、耗时、未解决状态</td>
+</tr>
+<tr>
+<td>可安装交付</td>
+<td>清单校验、升级备份、编辑保护与失败回滚</td>
+</tr>
+</tbody></table>
+<h2>立即试用</h2>
+<p>Python 3.10+，解压后进入目录：</p>
+<pre><code class="language-sh">python cli.py --config examples/config.json decide examples/request.json
+python cli.py --config examples/config.json report demo
+</code></pre>
+<p>示例已包含演示训练模型，无需联网。示例仅覆盖特定中文反馈分类，不能作为通用语义模型。安装技能：</p>
+<pre><code class="language-sh">python install.py --check
+python install.py
+</code></pre>
+<p>默认安装到 <code>~/.codex/skills/decision-kit</code>。支持自定义目标目录及 <code>--upgrade</code>；不会静默更改宿主配置。宿主是否自动调用取决于其能力与设置。</p>
+<h2>多语言从哪里来</h2>
+<p>使用 <a href="https://huggingface.co/intfloat/multilingual-e5-small">multilingual-e5-small</a> 的跨语言向量表示。上游模型卡声明约100种语言覆盖，并指出低资源语言可能退化；这不是本插件100语言准确率保证。</p>
+<pre><code class="language-sh">python -m pip install -r requirements-semantic.txt
+python fetch_model.py /absolute/models/multilingual-e5-small
+</code></pre>
+<p>权重单独下载，不塞进技能ZIP。后续加载离线运行。配置方法见 <a href="%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md">使用说明</a>。Qwen与llama.cpp可通过兼容聊天API接入；本包没有重新训练或分发Qwen权重。</p>
+<p><img src="assets/language-checks.png" alt="语言与质量验证"></p>
+<h2>测试证据</h2>
+<p>本机已实际加载 E5，对20种语言各1条合成样例进行冒烟测试：候选答案19/20正确；默认阈值接受13条，13条正确；7条待复核，其中包含1条误判。没有据此调整阈值。</p>
+<p>这不是独立业务基准，也不能代表各语言生产准确率。软件测试与模型测试分开记录：<a href="%E9%AA%8C%E6%94%B6%E6%8A%A5%E5%91%8A.md">验收报告</a>、<a href="evals/semantic-results.json">原始语义结果</a>、<a href="test-results.json">测试结果</a>。</p>
+<h2>成本必须算完整</h2>
+<p><img src="assets/budget-loop.png" alt="预算与费用闭环"></p>
+<p>token费用来自配置单价与服务端usage，属于估算。费用未知时保留预留额并停止升级。预留上界由操作员配置，不能替代供应商硬限额；本地设备成本未测。没有基线就不宣传节省比例。</p>
+<p>可用 <code>evals/compare.py</code> 在同一批标注任务上比较两份配置，同时查看完成率、正确率和费用。该工具可能实际调用付费API。</p>
+<h2>适用边界</h2>
+<ul>
+<li>决策结果不直接触发退款、删除或发送消息等外部动作。</li>
+<li>E5相似度、朴素贝叶斯分数都未校准；字段合法不代表语义正确。</li>
+<li>HTTP为本机单用户工具，项目名不是多租户认证。</li>
+<li>缓存可能保存抽取出的敏感内容，数据库未加密。</li>
+<li>兼容API已用本地协议测试服务验证，未进行付费供应商或Jev对照实验。</li>
+<li>提供可运行插件，不宣称复刻Jev底层架构、训练出新的基础模型或普遍优于Jev。</li>
+</ul>
+<p><a href="%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md">完整使用说明</a> · <a href="OPEN_SOURCE.md">开源选型与许可证</a> · <a href="LICENSE">MIT License</a></p>
+<p>首次配置可运行 <code>python setup_wizard.py /path/to/new-profile</code>，生成可直接运行的离线示例。费用对照支持按语言查看完成率、准确率和每个正确结果的估算费用。详见 <a href="%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md">使用说明</a>。</p>
+</main></html>

@@ -1,0 +1,13 @@
+{
+  "database": "../data/decisionkit.sqlite3",
+  "cache_ttl_seconds": 3600,
+  "project_budget_usd": 0,
+  "allow_remote": false,
+  "local_model": "model.json",
+  "local_criteria": {
+    "billing": "Payment, refund, invoice or duplicate charge problem",
+    "technical": "Software crash, error, login or export failure",
+    "suggestion": "Request to add or improve a feature"
+  },
+  "providers": []
+}

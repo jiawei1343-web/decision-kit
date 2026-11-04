@@ -1,0 +1,22 @@
+[
+ {"language":"zh","text":"我的银行卡被扣了两次钱，请退还多扣的部分。","label":"billing"},
+ {"language":"en","text":"The application closes whenever I try to save a document.","label":"technical"},
+ {"language":"fr","text":"Je voudrais une facture pour mon paiement.","label":"billing"},
+ {"language":"de","text":"Bitte fügen Sie einen dunklen Modus hinzu.","label":"suggestion"},
+ {"language":"es","text":"La aplicación se bloquea cuando intento iniciar sesión.","label":"technical"},
+ {"language":"pt","text":"Fui cobrado duas vezes. Quero um reembolso.","label":"billing"},
+ {"language":"it","text":"Vorrei poter personalizzare i colori dell'interfaccia.","label":"suggestion"},
+ {"language":"ru","text":"Программа вылетает при открытии файла.","label":"technical"},
+ {"language":"ar","text":"تم خصم المبلغ مرتين وأريد استرداد الدفعة الزائدة.","label":"billing"},
+ {"language":"hi","text":"कृपया ऐप में डार्क मोड की सुविधा जोड़ें।","label":"suggestion"},
+ {"language":"ja","text":"ファイルを保存しようとするとアプリが終了します。","label":"technical"},
+ {"language":"ko","text":"결제가 두 번 되었어요. 중복 결제를 환불해 주세요.","label":"billing"},
+ {"language":"th","text":"อยากให้เพิ่มโหมดมืดในแอป","label":"suggestion"},
+ {"language":"vi","text":"Ứng dụng bị treo khi tôi mở tệp.","label":"technical"},
+ {"language":"tr","text":"İki kez ücret alındı, para iadesi istiyorum.","label":"billing"},
+ {"language":"id","text":"Tolong tambahkan pilihan tema gelap.","label":"suggestion"},
+ {"language":"nl","text":"De app crasht zodra ik een bestand open.","label":"technical"},
+ {"language":"pl","text":"Pobrano opłatę dwa razy. Proszę o zwrot pieniędzy.","label":"billing"},
+ {"language":"uk","text":"Будь ласка, додайте темну тему інтерфейсу.","label":"suggestion"},
+ {"language":"sv","text":"Programmet kraschar när jag försöker spara filen.","label":"technical"}
+]

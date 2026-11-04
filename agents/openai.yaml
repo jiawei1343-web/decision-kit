@@ -1,0 +1,4 @@
+interface:
+  display_name: "DecisionKit"
+  short_description: "Local-first multilingual decisions with budget tracking"
+  default_prompt: "Use $decision-kit to classify these messages with a configured model and report unresolved cases."

@@ -1,0 +1,5 @@
+# 主视觉制作记录
+
+使用内置 image_gen 生成，未使用CLI或额外API密钥。最终文件：computation-workshop.png。
+
+提示词：Create a polished playful editorial 3D clay illustration for the GitHub README of DecisionKit, an AI computation routing plugin. Wide landscape composition. An imaginative miniature computation workshop: a friendly small teal robot dispatcher with a visor, wooden sorting trays holding blank paper tasks, a tiny efficient desk machine for simple work, a larger navy computing observatory for difficult work, reused task cards in a circular archive carousel, a small amber waiting bench where uncertain tasks pause. Connect the workshop with subtle miniature rails. Warm ivory background, teal, navy, amber, soft lilac accents, tactile ceramic and paper textures, beautiful soft shadows, professional product illustration with whimsy, clear visual hierarchy and generous breathing room. No flowchart boxes, no arrows, no graphs, no text, no letters, no numbers, no logos, no claims of measured savings. It should evoke choosing the right amount of computation, not speed racing or money printing.

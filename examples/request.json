@@ -1,0 +1,14 @@
+{
+  "task": "classify",
+  "project": "demo",
+  "text": "申请退款，重复扣款",
+  "language": "zh",
+  "criteria": {
+    "billing": "Payment, refund, invoice or duplicate charge problem",
+    "technical": "Software crash, error, login or export failure",
+    "suggestion": "Request to add or improve a feature"
+  },
+  "mode": "balanced",
+  "max_cost_usd": 0,
+  "allow_remote": false
+}
